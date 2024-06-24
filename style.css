@@ -1,0 +1,92 @@
+/* Resetting default browser styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: yellow;
+}
+
+.welcome-note {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.welcome-note h1 {
+	margin-bottom: 10px;
+}
+
+.welcome-note p {
+	margin-bottom: 20px;
+}
+
+.welcome-note button {
+	padding: 10px 20px;
+	font-size: 1em;
+	background-color: yellow;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.welcome-note button:hover {
+	background-color:yellow;
+}
+
+.game-container {
+	display: none; 
+	justify-content: center;
+	align-items: center;
+	background-color: yellow;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-board {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+}
+
+.card {
+	background-color: #007bff;
+	padding: 20px;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: transform 0.3s, background-color 0.3s;
+}
+
+.card.flipped {
+	background-color: #ffffff;
+	color: #000000;
+	transform: rotateY(180deg);
+}
+
+.card.matched {
+	background-color: #28a745;
+	color: #ffffff;
+	cursor: default;
+}
